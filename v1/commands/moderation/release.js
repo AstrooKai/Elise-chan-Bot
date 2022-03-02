@@ -11,7 +11,7 @@ $userTag[$mentioned[1]] ($mentioned[1])
 $day[yes] $month $day $year - $hour:$minute:$second UTC
 > **Channel Where Command Is Executed**
 $channelName ($channelID)}{color:$getVar[default]}{timestamp}]
-$channelSendMessage[922407637411328010;{title:Release Log}{description:**$userTag** arrested **$userTag[$mentioned[1]]**
+$channelSendMessage[922407637411328010;{title:Release Log}{description:**$userTag** released **$userTag[$mentioned[1]]**
 
 > **Moderator**
 $userTag ($authorID)
