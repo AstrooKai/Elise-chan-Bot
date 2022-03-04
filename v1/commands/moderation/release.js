@@ -23,7 +23,7 @@ $day[yes] $month $day $year - $hour:$minute:$second UTC
 $channelName ($channelID)}{color:$getVar[default]}{timestamp}]
 
 $if[$isUserDMEnabled[$mentioned[1]]==true]
-$sendDM[$mentioned[1];{title:Notofication}{description:You are now released on **Bar Lupin**. You access to the rest of the server are now restored.}{color:$getVar[default]}{timestamp}]
+$sendDM[$mentioned[1];{title:Notification}{description:You are now released on **Bar Lupin**. You access to the rest of the server are now restored.}{color:$getVar[default]}{timestamp}]
 $else
 $log[A user cannot be DM'ed. - Arrest Command]
 $endif
