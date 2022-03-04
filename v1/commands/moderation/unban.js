@@ -39,7 +39,7 @@ $else
 $endif}{color:$getVar[default]}{timestamp}]
 
 $if[$isUserDMEnabled[$mentioned[1]]==true]
-$sendDM[$mentioned[1];{title:Notofication}{description:You are now unbanned from **Bar Lupin**. server for
+$sendDM[$mentioned[1];{title:Notification}{description:You are now unbanned from **Bar Lupin**. server for
 $if[$checkContains[$message;!r]==true]
 
 $splitText[2]
