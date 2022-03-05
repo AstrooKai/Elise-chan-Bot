@@ -1,7 +1,7 @@
 module.exports = {
   name: "unban",
   aliases: ['thoushaltnotdie'],
-  code: `$channelSendMessage[924580942281068554;{title:Unban Log}{description:
+  code: `$channelSendMessage[LOG_CHANNEL1_ID;{title:Unban Log}{description:
 **$userTag** unbanned **$userTag[$message[1]]**!
 
 > **Moderator**
