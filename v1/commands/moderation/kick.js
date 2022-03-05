@@ -1,7 +1,7 @@
 module.exports = {
   name: "kick",
   aliases: ['fallingcamellia'],
-  code: `$channelSendMessage[924580942281068554;{title:Kick Log}{description:
+  code: `$channelSendMessage[LOG_CHANNEL1_ID;{title:Kick Log}{description:
 **$userTag** kicked **$userTag[$findMember[$mentioned[1];no]]**!
 > **Moderator**
 $userTag
