@@ -1,7 +1,7 @@
 module.exports = {
   name: "ban",
   aliases:['ningenshikkaku'],
-  code: `$channelSendMessage[924580942281068554;{title:Ban Log}{description:
+  code: `$channelSendMessage[LOG_CHANNEL1_ID;{title:Ban Log}{description:
 **$userTag** banned **$userTag[$findMember[$splitText[1];no]]**!
 
 > **Moderator**
@@ -19,6 +19,7 @@ $textSplit[$message;!r]
 $else
 \` No Reason \`
 $endif}{color:$getVar[default]}{timestamp}]
+
 $channelSendMessage[922407637411328010;{title:Ban Log}{description:
 **$userTag** banned **$userTag[$findMember[$splitText[1];no]]**!
 
