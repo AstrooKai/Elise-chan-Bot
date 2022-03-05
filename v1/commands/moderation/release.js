@@ -1,7 +1,7 @@
 module.exports = {
   name: "release",
   aliases: ['unrashomon'],
-  code: `$channelSendMessage[924580942281068554;{title:Release Log}{description:**$userTag** released **$userTag[$mentioned[1]]**
+  code: `$channelSendMessage[LOG_CHANNEL1_ID;{title:Release Log}{description:**$userTag** released **$userTag[$mentioned[1]]**
 
 > **Moderator**
 $userTag ($authorID)
