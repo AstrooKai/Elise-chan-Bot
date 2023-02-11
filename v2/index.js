@@ -2,7 +2,7 @@ const aoijs = require('aoi.js'); // Imports aoi.js
 
 // Sets up the 'client' that will be used by the bot
 const client = new aoijs.AoiClient({
-  token: 'OTQ3ODY0NTExODk1OTY5ODEy.GhwuSF.6nZRhii2xEmIp7PeXLs8nbWNKZM_HUvgfgF7g0',
+  token: 'token',
   prefix: '>',
   intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"]
 });
