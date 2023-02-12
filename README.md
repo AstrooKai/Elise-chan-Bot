@@ -1,2 +1,2 @@
 # Elise-chan-Bot
-Repository for Elise-chan, a discord bot written in aoi.js (v4.6.0). Made for Bar Lupin
+Archive repository for discord bot 'Elise-chan', made exclusively for Bar Lupin.
