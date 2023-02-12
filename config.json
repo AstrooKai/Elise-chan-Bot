@@ -1,0 +1,5 @@
+{
+  "token": "TOKEN",
+  "prefix": "?",
+  "intents": ["MessageContent", "Guilds", "GuildMessages"]
+}
