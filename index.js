@@ -1,21 +1,24 @@
 const aoijs = require('aoi.js'); //import aoi.js
-const config = require('./config.json'); //import config file
 const { setup } = require('aoi.parser'); //import aoi.parser
-setup(aoijs.Util); //setup parsers
+setup(aoijs.Util); //setup parser
 
 //configure client
 const client = new aoijs.AoiClient({
-  token: config.token, //client token
-  prefix: config.prefix, //client prefix
-  intents: config.intents, //client intents
-  events: {functionError: true} //allows for errors to be handled and logged
+  token: process.env.TOKEN, //client token
+  prefix: process.env.PREFIX, //client prefix
+  intents: ['MessageContent','GuildMessages','Guilds','GuildPresences'], //client intents
+  events: ['onMessage','onFunctionError','onInteractionCreate'], //client events
+  aoiWarning: false //disable unnecessary outdated package warning log
 });
 
-//command loader
+//load commands from 'commands' folder
 const loader = new aoijs.LoadCommands(client);
 loader.load(client.cmd, './commands');
 
-require('./events.js')(client); //client events
+client.readyCommand({
+  code: `$log[Logged in on: $userTag[$clientID]]`
+});
+
 require('./variables.js')(client); //variables
 require('./status.js')(client); //client status
 require('./customFuncs.js')(client); //custom functions

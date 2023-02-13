@@ -6,7 +6,7 @@ module.exports = {
 
 $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, message: "user verified."}]
 
-$interactionReply[;{newEmbed:{title:Welcome to Bar Lupin!}{description:**$userTag[$interactionData[author.id]]** you're now verified! Please proceed now to read and accept our <#924493483295801394>, before grabbing yourself some <#924517564841861120>, <#924493720399794206> and <#1001491980460765216>. Drop an <#948899156058075136> while you're at it, we hope you enjoy the server!}{color:$getVar[default]}};components?;;everyone;yes]
+$interactionReply[;{newEmbed:{title:Welcome to Bar Lupin!}{description:**$userTag[$interactionData[author.id]]** you're now verified! Please proceed now to read and accept our <#924493483295801394>, before grabbing yourself some <#924517564841861120>, <#924493720399794206> and <#1001491980460765216>. Drop an <#948899156058075136> while you're at it, we hope you enjoy the server!}{color:$getVar[default]}};components?;;everyone;true]
 
 $addCmdReactions[✅]
 
