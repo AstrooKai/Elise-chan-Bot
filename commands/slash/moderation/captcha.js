@@ -12,8 +12,8 @@ $addCmdReactions[✅]
 
 $setUserVar[isAuthorVerified;true;$authorID]
 
-$onlyIf[$toUppercase[$slashOption[code]]==$getUserVar[userCaptchaCode];{newEmbed:{description:Incorrect captcha code, please try again!}{color:$getVar[red]}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$cooldown[3s;{newEmbed:{author:ERR-06 Cooldown:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err06] %time%!}{color:$getVar[red]}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$onlyIf[$getUserVar[isAuthorVerified]==false;{newEmbed:{description:You are already verified!}{color:$getVar[red]}}{options:{ephemeral}}{extraOptions:{interaction}}]
+$onlyIf[$toUppercase[$slashOption[code]]==$getUserVar[userCaptchaCode];{newEmbed:{description:Incorrect captcha code, please try again!}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$cooldown[3s;{newEmbed:{author:ERR-06 Cooldown:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err06] %time%!}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyIf[$getUserVar[isAuthorVerified]==false;{newEmbed:{description:You are already verified!}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
 $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, message: "used verify command."}]`
 }

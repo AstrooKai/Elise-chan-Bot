@@ -2,25 +2,11 @@ module.exports = {
   name: "addgif",
   prototype: "slash",
   type: "interaction",
-  code: `$djsEval[const axios = require('axios')
-const { MessageEmbed } = require('discord.js')
-const { codeBlock } = require('@discordjs/builders')
+  code: `
+$interactionReply[;{newEmbed:{title:HTTP 201 Created}{description:GIF successfully added to API database.}{field:Response Data:\`\`\`json
+$httpRequest[http://82.223.64.239:27621/bungogifs;POST;{"name":"$slashOption[name]", "url":"$nonEscape[$slashOption[url]]"};;{newEmbed:{title:An error occured!}{description:An error occured upon sending your request to the API, please notify the developer.}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+\`\`\`}{color:Green}{footer:ECA-GIF}{timestamp}}]
 
-axios.post('http://co.daki.cc:4188/bungogifs', {link:"$splitText[1]", name:"$splitText[2]"})
-.then((res) => {
-let stat = 'HTTP ' + res.status + ' ' + res.statusText
-const embed = new MessageEmbed().setTitle('Data added to the API!')
-.setDescription(codeBlock('{"link":"$splitText[1]", "name":"$splitText[2]"}'))
-.setFooter(stat)
-.setTimestamp()
-.setColor('$getVar[green]')
-message.channel.send({ embed })
-}, (err) => {
-message.channel.send(err)
-})]
-
-$interactionReply[;{newEmbed:{title:}}]
-
-$onlyIf[$stringEndsWith[$slashOption[url];.gif]==true;{newEmbed:{author:API Error:http://co.daki.cc:4188/media/err.png}{description:The request has been declined, the image URL must end with \`.gif\`!}{color:$getVar[red]}}]
-$onlyForRoles[$getVar[authorizedOne];$getVar[authorizedTwo];{newEmbed:{author:ERR-01 Unauthorized:http://co.daki.cc:4188/media/err.png}{description:$getVar[err01]}{color:$getVar[red]}}]`
+$onlyIf[$stringEndsWith[$slashOption[url];.gif]==true;{newEmbed:{author:API Error:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:The request has been declined, the image URL must end with \`.gif\`!}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyForRoles[$getVar[authorizedOne];$getVar[authorizedTwo];{newEmbed:{author:ERR-01 Unauthorized:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err01]}{color:Red}}]`
 }

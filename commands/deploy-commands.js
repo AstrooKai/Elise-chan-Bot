@@ -1,7 +1,13 @@
 module.exports = {
   name: "deploy",
   code: `
-$createApplicationCommand[$guildID;unban;unban a user from the server;true;slash;[{"name": "user", "description": "user ID to unban", "required": true, "type": 3},{"name": "reason", "description": "reason of unbanning", "required": false, "type": 3}]]]Unban command deployed
+$createApplicationCommand[$guildID;addmeme;add meme to the bot's API;true;slash;[{"name": "name", "description": "name of the meme", "required": true, "type": 3},{"name": "url", "description": "URL of the meme", "required": true, "type": 3}]]
+AddMeme command deployed
+
+$createApplicationCommand[$guildID;addgif;add GIF to the bot's API;true;slash;[{"name": "name", "description": "name of the GIF", "required": true, "type": 3},{"name": "url", "description": "URL of the GIF", "required": true, "type": 3}]]
+AddGIF command deployed
+
+$createApplicationCommand[$guildID;unban;unban a user from the server;true;slash;[{"name": "user", "description": "user ID to unban", "required": true, "type": 3},{"name": "reason", "description": "reason of unbanning", "required": false, "type": 3}]]Unban command deployed
 
 $createApplicationCommand[$guildID;release;release a member from jail;true;slash;[{"name": "user", "description": "member to release", "required": true, "type": 6}]]Release command deployed
 

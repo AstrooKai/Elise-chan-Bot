@@ -8,10 +8,10 @@ $interactionReply[;{newEmbed:{title:ARRESTED!}{description:***$userTag[$findMemb
 
 $giveRole[$guildID;$findMember[$slashOption[user];false];933655133332602880]
 
-$onlyIf[$rolePosition[$highestRole[$authorID]]<$rolePosition[$highestRole[$findMember[$slashOption[user];false]]];{newEmbed:{author:Heirachy:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err05]}{color:Red}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$onlyIf[$isBot[$findMember[$slashOption[user];false]]==false;{newEmbed:{author:User is Bot:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err03]}{color:Red}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$onlyIf[$findMember[$slashOption[user];false]!=$authorID;{newEmbed:{author:User is Author:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err04]}{coor:Red}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$onlyIf[$memberExists[$findMember[$slashOption[user];false];$guildID]==true;{newEmbed:{author:User Invalid:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err00]}{color:Red}]
-$argsCheck[>0;{newEmbed:{author:Bad Request:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err02]}{field:Usage:$jsonRequest[http#COLON#//co.daki.cc#COLON#4188/commands/arrest;Usage]:yes}{color:Red}}{options:{ephemeral}}{extraOptions:{interaction}}]
-$onlyForRoles[$getVar[authorizedOne];$getVar[authorizedTwo];{newEmbed:{author:Unauthorized:http#COLON#//co.daki.cc#COLON#4188/media/err.png}{description:$getVar[err01]}{color:Red}}{options:{ephemeral}}{extraOptions:{interaction}}]`
+$onlyIf[$rolePosition[$highestRole[$authorID]]<$rolePosition[$highestRole[$findMember[$slashOption[user];false]]];{newEmbed:{author:Heirachy:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err05]}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyIf[$isBot[$findMember[$slashOption[user];false]]==false;{newEmbed:{author:User is Bot:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err03]}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyIf[$findMember[$slashOption[user];false]!=$authorID;{newEmbed:{author:User is Author:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err04]}{coor:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyIf[$memberExists[$findMember[$slashOption[user];false];$guildID]==true;{newEmbed:{author:User Invalid:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err00]}{color:Red}]
+$argsCheck[>0;{newEmbed:{author:Bad Request:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err02]}{field:Usage:$jsonRequest[http#COLON#//82.223.64.239#COLON#27621/commands/arrest;Usage]:yes}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
+$onlyForRoles[$getVar[authorizedOne];$getVar[authorizedTwo];{newEmbed:{author:Unauthorized:http#COLON#//82.223.64.239#COLON#27621/media/err.png}{description:$getVar[err01]}{color:Red}}{options:{ephemeral: true}}{extraOptions:{interaction: true}}]`
 }

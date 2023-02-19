@@ -9,6 +9,6 @@ $description[1;__**Ping**__
 **API:** N/A
 __**Uptime**__
 **Bot:** $uptime
-**API:** $jsonRequest[http://co.daki.cc:4188/uptime;uptime]]
-$color[1;$getVar[green]]`
+**API:** $jsonRequest[http#COLON#//82.223.64.239#COLON#27621/uptime;uptime]]
+$color[1;Green]`
 }

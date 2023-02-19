@@ -1,4 +1,5 @@
 const aoijs = require('aoi.js'); //import aoi.js
+require('dotenv').config();
 const { setup } = require('aoi.parser'); //import aoi.parser
 setup(aoijs.Util); //setup parser
 
@@ -16,7 +17,7 @@ const loader = new aoijs.LoadCommands(client);
 loader.load(client.cmd, './commands');
 
 client.readyCommand({
-  code: `$log[Logged in on: $userTag[$clientID]]`
+  code: `$log[Logged in: $userTag[$clientID]]`
 });
 
 require('./variables.js')(client); //variables

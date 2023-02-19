@@ -22,7 +22,7 @@ module.exports = (client) => {
       const [name, url] = data.inside.splits;
       const axios = require('axios');
 
-      axios.post('http://co.daki.cc:4188/bungogifs', {
+      axios.post('http://82.223.64.239:27621/bungogifs', {
         name: name,
         url: url
       })
@@ -45,8 +45,8 @@ module.exports = (client) => {
 
           const errorEmbed = new EmbedBuilder()
             .setTitle('Error Occured')
-            .setDescription(`An error occured while making a request to the server: ${err.message}`)
-            .setColor('#FF0000')
+            .setDescription(codeBlock('js', `An error occured while making a request to the server: ${err.message}`))
+            .setColor('#ED4245')
             .setTimestamp()
             .setFooter({ text: 'ECA-GIF' });
 
@@ -69,7 +69,7 @@ module.exports = (client) => {
       const [name, url] = data.inside.splits;
       const axios = require('axios');
 
-      axios.post('http://co.daki.cc:4188/bungomemes', {
+      axios.post('http://82.223.64.239:27621/bungomemes', {
         name: name,
         url: url
       })
@@ -92,8 +92,8 @@ module.exports = (client) => {
 
           const errorEmbed = new EmbedBuilder()
             .setTitle('Error Occured')
-            .setDescription(`An error occured while making a request to the server: ${err.message}`)
-            .setColor('#FF0000')
+            .setDescription(codeBlock('js', `An error occured while making a request to the server: ${err.message}`))
+            .setColor('#ED4245')
             .setTimestamp()
             .setFooter({ text: 'ECA-Meme' });
 
