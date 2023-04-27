@@ -9,6 +9,6 @@ $description[1;__**Ping**__
 **API:** N/A
 __**Uptime**__
 **Bot:** $uptime
-**API:** $jsonRequest[http#COLON#//82.223.64.239#COLON#27621/uptime;uptime]]
+**API:** $jsonRequest[http://par01.pylexnodes.net:30113/uptime;uptime]]
 $color[1;Green]`
 }

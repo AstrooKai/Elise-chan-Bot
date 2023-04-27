@@ -12,14 +12,18 @@ const client = new aoijs.AoiClient({
   aoiWarning: false //disable unnecessary outdated package warning log
 });
 
+const { LoadCustomFunctions } = require('./Funcs.js');
+LoadCustomFunctions(client);
+
 //load commands from 'commands' folder
 const loader = new aoijs.LoadCommands(client);
+loader.setColors(loader.themes.default);
 loader.load(client.cmd, './commands');
 
 client.readyCommand({
   code: `$log[Logged in: $userTag[$clientID]]`
 });
 
-require('./variables.js')(client); //variables
+client.variables(require('./variables/variables.js')); //normal variables
+
 require('./status.js')(client); //client status
-require('./customFuncs.js')(client); //custom functions
