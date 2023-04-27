@@ -9,6 +9,6 @@ $description[1;__**Ping**__
 **API:** N/A
 __**Uptime**__
 **Bot:** $uptime
-**API:** $jsonRequest[http://par01.pylexnodes.net:30113/uptime;uptime]]
+**API:** $jsonRequest[https://eca.astrookai.repl.couptime;uptime]]
 $color[1;Green]`
 }

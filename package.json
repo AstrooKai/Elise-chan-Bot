@@ -1,0 +1,22 @@
+{
+  "name": "elise-chan-3",
+  "version": "1.0.0",
+  "description": "Third version of the Elise-chan Bot series, made for Bar Lupin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstrooKai/Elise-chan-Bot.git"
+  },
+  "author": "AstrooKai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AstrooKai/Elise-chan-Bot/issues"
+  },
+  "dependencies": {
+    "aoi.js": "6.1.1",
+    "aoi.parser": "1.2.5"
+  }
+}

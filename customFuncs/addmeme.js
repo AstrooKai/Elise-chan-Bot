@@ -9,7 +9,7 @@ module.exports = {
     const [name, url] = data.inside.splits;
     const axios = require('axios');
 
-    axios.post('http://par01.pylexnodes.net:30113/bungomemes', {
+    axios.post('https://eca.astrookai.repl.cobungomemes', {
       name: name,
       url: url
     })

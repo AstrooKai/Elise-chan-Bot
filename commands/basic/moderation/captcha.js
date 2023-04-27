@@ -2,12 +2,12 @@ module.exports = [{
   channel: "933384124289417236",
   name: "captcha",
   type: "join",
-  code: `$channelSendMessage[933384124289417236;<@$authorID>{newEmbed:{author:Verification:http#COLON#//par01.pylexnodes.net#COLON#30113/media/verify-shield.png}{description:Welcome to **Bar Lupin**! Please solve the captcha below to verify that you are not a bot, this is to prevent unwanted accounts that may cause issues in the community.\n\nTo verify, simply find the six character code in the image below and use the \`>verify\` command. You can refer to the usage and example below for guidance. You only have 10 minutes to complete this. Failing to complete results to auto-kick.\n\n**Usage**\n\`\`\`\n>verify <code>\n\`\`\`\n**Example**\n\`\`\`\n>verify ABCDEF\n\`\`\`}{image:$getobjectProperty[image]}{color:$getVar[default]}{timestamp}};false]
+  code: `$channelSendMessage[933384124289417236;<@$authorID>{newEmbed:{author:Verification:https#COLON#//eca.astrookai.repl.co/media/verify-shield.png}{description:Welcome to **Bar Lupin**! Please solve the captcha below to verify that you are not a bot, this is to prevent unwanted accounts that may cause issues in the community.\n\nTo verify, simply find the six character code in the image below and use the \`>verify\` command. You can refer to the usage and example below for guidance. You only have 10 minutes to complete this. Failing to complete results to auto-kick.\n\n**Usage**\n\`\`\`\n>verify <code>\n\`\`\`\n**Example**\n\`\`\`\n>verify ABCDEF\n\`\`\`}{image:$getobjectProperty[image]}{color:$getVar[default]}{timestamp}};false]
 $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, message: "10m kick timer started."}]
 $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, message: "user joined the server."}]
 $setUserVar[userCaptchaCode;$getObjectProperty[text];$authorID;$guildID]
 $setUserVar[isAuthorVerified;false]
-$createObject[$jsonRequest[http#COLON#//par01.pylexnodes.net#COLON#30113/captcha;;{newEmbed:{title:Uh-oh!}{description:It seems that my API is down and I can't request your captcha challenge! Are you a real human? If so, ask for our executives to manually verify you! This error is still being figured by the developer and currently has no solution, sorry for the inconvenience! :Cry_Chuuya:}{color:Red}}]]
+$createObject[$jsonRequest[https#COLON#//eca.astrookai.repl.co/captcha;;{newEmbed:{title:Uh-oh!}{description:It seems that my API is down and I can't request your captcha challenge! Are you a real human? If so, ask for our executives to manually verify you! This error is still being figured by the developer and currently has no solution, sorry for the inconvenience! :Cry_Chuuya:}{color:Red}}]]
 $giveRoles[$guildID;$authorID;939146842892013568;939145270300667904;939164555089686548;939145928399552613;939149674777018448]`
 }, {
   channel: "922407203363753984",
@@ -38,7 +38,7 @@ $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, me
 $addCmdReactions[✅]
 $setUserVar[isAuthorVerified;true;$authorID]
 $onlyIf[$toUppercase[$message[1]]==$getUserVar[userCaptchaCode];{newEmbed:{description:Incorrect captcha code, please try again!}{color:Red}}]
-$cooldown[3s;{newEmbed:{author:ERR-06 Cooldown:http#COLON#//par01.pylexnodes.net#COLON#30113/media/err.png}{description:$getVar[err06] %time%!}{color:Red}}]
+$cooldown[3s;{newEmbed:{author:ERR-06 Cooldown:https#COLON#//eca.astrookai.repl.co/media/err.png}{description:$getVar[err06] %time%!}{color:Red}}]
 $onlyIf[$getUserVar[isAuthorVerified]==false;{newEmbed:{description:You are already verified!}{color:Red}}]
 $log[{time: "$iso", captcha: "$getUserVar[userCaptchaCode]", user: $authorID, message: "used verify command."}]`
 }]
