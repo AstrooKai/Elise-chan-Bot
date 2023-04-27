@@ -9,6 +9,6 @@ $addField[1;Aliases;$getObjectProperty[Aliases];false]
 $addField[1;Category;$getObjectProperty[Category];true]
 $addField[1;Command Name;$getObjectProperty[CommandName];true]
 $color[#1e90ff]
-$createObject[$jsonRequest[https://eca.astrookai.repl.cocommands/$message[1]]]
+$createObject[$jsonRequest[https://eca.astrookai.repl.co/commands/$message[1]]]
 $onlyIf[$checkContains[$message[1];arrest;ban;kick;release;unban;addgif;addmeme;bungogif;bungomeme;eval;help;reboot;status;system;update]==true;{newEmbed:{author:Help | List:https#COLON#//eca.astrookai.repl.co/media/info.png}{field:Moderation:arrest, ban, kick, release, unban:no}{field:Fun:addgif, addmeme, bungogif, bungomeme:no}{field:Misc:eval, help, reboot, status, system, update:no}{color:#1e90ff}}]`
 }

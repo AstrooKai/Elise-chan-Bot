@@ -9,7 +9,7 @@ module.exports = {
     const [name, url] = data.inside.splits;
     const axios = require('axios');
 
-    axios.post('https://eca.astrookai.repl.cobungomemes', {
+    axios.post('https://eca.astrookai.repl.co/bungomemes', {
       name: name,
       url: url
     })

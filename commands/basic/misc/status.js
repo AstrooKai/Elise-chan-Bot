@@ -9,6 +9,6 @@ $description[1;__**Ping**__
 **API:** N/A
 __**Uptime**__
 **Bot:** $uptime
-**API:** $jsonRequest[https://eca.astrookai.repl.couptime;uptime]]
+**API:** $jsonRequest[https://eca.astrookai.repl.co/uptime;uptime]]
 $color[1;Green]`
 }

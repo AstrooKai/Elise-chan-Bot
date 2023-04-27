@@ -9,6 +9,6 @@ $updateCommands
 $log[RELOADING COMMANDS...]
 $let[before;$commandsCount]
 $title[1;Updating Commands...]
-$image[1;https://eca.astrookai.repl.comedia/loading.gif]
+$image[1;https://eca.astrookai.repl.co/media/loading.gif]
 $color[1;$getVar[default]]`
 }
